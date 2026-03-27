@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonu Cafe | Kulhad Tea, Coffee & Bites in Utai, Bhilai</title>
+    <meta name="description"
+        content="Sonu Cafe is a colorful local hangout in Utai, Bhilai for kulhad tea, coffee, Maggi, sandwiches, fries, shakes, mocktails, and quick pickup orders.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Sora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-row">
+            <a href="#home" class="brand" aria-label="Sonu Cafe home">
+                <span class="brand-mark">sonu</span><span class="brand-accent">cafe</span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Primary">
+                <a href="#about">About</a>
+                <a href="#favorites">Top Picks</a>
+                <a href="#menu">Menu</a>
+                <a href="#visit">Visit</a>
+            </nav>
+
+            <div class="header-actions">
+                <a class="button button-secondary"
+                    href="https://wa.me/918103726668?text=Hello%20Sonu%20Cafe!%20I%20would%20like%20to%20order..."
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+                <a class="button button-primary" href="tel:+918103726668">
+                    <i class="fa-solid fa-phone"></i> Call to Order
+                </a>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="container mobile-menu" id="mobile-menu" hidden>
+            <div class="mobile-menu-panel">
+                <nav aria-label="Mobile">
+                    <a href="#about">About</a>
+                    <a href="#favorites">Top Picks</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#visit">Visit</a>
+                    <a href="https://instagram.com/sonu_cafe_utai" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i> @sonu_cafe_utai</a>
+                    <a href="https://wa.me/918103726668?text=Hello%20Sonu%20Cafe!%20I%20would%20like%20to%20order..."
+                        target="_blank" rel="noopener noreferrer">Order on WhatsApp</a>
+                    <a href="tel:+918103726668">Call 8103726668</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-content" data-reveal>
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span>
+                        Sonu Cafe Utai, In front of shubham K-Mart, Utai.
+                    </div>
+                    <h1 class="hero-title">Tea, toast, and chill <span class="text-gradient">vibes</span> for your daily stop.</h1>
+                    <p class="lead">
+                        Sonu Cafe is built for quick chai breaks, casual hangouts, and easy pickup orders. Drop in for
+                        kulhad tea, coffee, loaded Maggi, sandwiches, fries, shakes, and mocktails.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button button-glow button-primary" href="#menu">
+                            <i class="fa-solid fa-utensils"></i> Explore the Menu
+                        </a>
+                        <a class="button button-glass" href="#visit">
+                            <i class="fa-solid fa-store"></i> Find the Cafe
+                        </a>
+                        <a class="button button-whatsapp"
+                            href="https://wa.me/918103726668?text=Hello%20Sonu%20Cafe!%20I%20would%20like%20to%20order..."
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a class="button button-glass" style="border-color: rgba(255,255,255,0.2)"
+                            href="https://instagram.com/sonu_cafe_utai"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-instagram" style="color: #E1306C"></i> @sonu_cafe_utai
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <strong class="stat-value">Rs. 10+</strong>
+                            <span class="stat-label">Starting Price</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <strong class="stat-value">9 AM - 10:30 PM</strong>
+                            <span class="stat-label">Open all days in a week</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <strong class="stat-value">Fast</strong>
+                            <span class="stat-label">Quick Pickup</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-bento" data-reveal>
+                    <article class="bento-card bento-main">
+                        <div class="bento-bg" style="background-image: url('images/hero-kulhad-tea.png');"></div>
+                        <div class="bento-overlay"></div>
+                        <div class="bento-content">
+                            <div class="glass-pill">
+                                <i class="fa-solid fa-mug-hot"></i> Signature
+                            </div>
+                            <h2>Kulhad tea with street-corner energy.</h2>
+                        </div>
+                    </article>
+
+                    <article class="bento-card bento-list">
+                        <h3>Try these first</h3>
+                        <ul class="sleek-list">
+                            <li><strong>Kulhad Tea</strong><span>Rs. 20</span></li>
+                            <li><strong>Veg Peri Peri Maggi</strong><span>Rs. 60</span></li>
+                            <li><strong>Bombay Sandwich</strong><span>Rs. 70</span></li>
+                            <li><strong>Cold Coffee</strong><span>Rs. 80</span></li>
+                        </ul>
+                    </article>
+                    
+                    <article class="bento-card bento-photo">
+                        <div class="bento-bg" style="background-image: url('images/hero-mini-photo.png');"></div>
+                        <div class="bento-overlay"></div>
+                    </article>
+
+                    <article class="bento-card bento-spotlight">
+                        <div class="spotlight-blur"></div>
+                        <span class="spotlight-icon-new"><i class="fa-solid fa-fire-flame-curved"></i></span>
+                        <h3>Fast food,<br>fresh feel.</h3>
+                        <p>Simple, craveable, easy.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="ticker" aria-label="Menu highlights">
+            <div class="ticker-track">
+                <span class="ticker-chip"><i class="fa-solid fa-mug-hot"></i> Kulhad Tea</span>
+                <span class="ticker-chip"><i class="fa-solid fa-mug-saucer"></i> Hot Coffee</span>
+                <span class="ticker-chip"><i class="fa-solid fa-bowl-food"></i> Cheese Maggi</span>
+                <span class="ticker-chip"><i class="fa-solid fa-bread-slice"></i> Sandwiches</span>
+                <span class="ticker-chip"><i class="fa-solid fa-ice-cream"></i> Cold Coffee & Shakes</span>
+                <span class="ticker-chip"><i class="fa-solid fa-martini-glass-citrus"></i> Mocktails</span>
+                <span class="ticker-chip"><i class="fa-solid fa-mug-hot"></i> Kulhad Tea</span>
+                <span class="ticker-chip"><i class="fa-solid fa-mug-saucer"></i> Hot Coffee</span>
+                <span class="ticker-chip"><i class="fa-solid fa-bowl-food"></i> Cheese Maggi</span>
+                <span class="ticker-chip"><i class="fa-solid fa-bread-slice"></i> Sandwiches</span>
+                <span class="ticker-chip"><i class="fa-solid fa-ice-cream"></i> Cold Coffee & Shakes</span>
+                <span class="ticker-chip"><i class="fa-solid fa-martini-glass-citrus"></i> Mocktails</span>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <div>
+                        <p class="section-kicker">Why People Stop Here</p>
+                        <h2 class="section-title">Not fancy for the sake of it. Just warm, local, and easy to come back
+                            to.</h2>
+                    </div>
+                    <p class="section-copy">
+                        Sonu Cafe works because it keeps the experience simple: approachable prices, familiar favorites,
+                        and a vibe that fits both a quick chai stop and a longer catch-up.
+                    </p>
+                </div>
+
+                <div class="story-grid">
+                    <article class="story-panel" data-reveal>
+                        <h3>Your neighborhood cafe for chai breaks, snack stops, and easy evenings.</h3>
+                        <p>
+                            Sonu Cafe Utai, In front of shubham K-Mart, Utai. It is
+                            the kind of place people return to for kulhad tea, simple coffee, quick snacks, and no-fuss
+                            pickup orders.
+                        </p>
+                        <p>
+                            Whether you are in for a fast tea, a shared plate of fries, or a cold coffee break, the menu
+                            is built around familiar cravings and quick choices.
+                        </p>
+                        <div class="story-actions">
+                            <a class="button button-primary" href="#favorites">
+                                <i class="fa-solid fa-star"></i> See Top Picks
+                            </a>
+                            <a class="button button-secondary" href="tel:+918103726668">
+                                <i class="fa-solid fa-phone"></i> Call the Cafe
+                            </a>
+                        </div>
+                    </article>
+
+                    <div class="features-grid">
+                        <article class="feature-tile" data-reveal>
+                            <i class="fa-solid fa-mug-hot"></i>
+                            <h3>Signature kulhad experience</h3>
+                            <p>Tea and coffee served in mud cups give the menu a clear identity and something worth
+                                leading with visually.</p>
+                        </article>
+                        <article class="feature-tile" data-reveal>
+                            <i class="fa-solid fa-wallet"></i>
+                            <h3>Budget-friendly without looking cheap</h3>
+                            <p>The page emphasizes value, but with stronger typography and layout so the brand feels
+                                better, not busier.</p>
+                        </article>
+                        <article class="feature-tile" data-reveal>
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <h3>Faster order intent</h3>
+                            <p>Call and WhatsApp actions are visible across the page, which fits how neighborhood cafes
+                                actually get orders.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="favorites">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <div>
+                        <p class="section-kicker">Top Picks</p>
+                        <h2 class="section-title">Start with these if you want the cafe at its best.</h2>
+                    </div>
+                    <p class="section-copy">
+                        These are the easiest ways to get a feel for the cafe: signature serves, comfort snacks, and
+                        cold favorites that work any day of the week.
+                    </p>
+                </div>
+
+                <div class="signature-grid">
+                    <article class="featured-item" data-reveal>
+                        <div class="featured-media" style="background-image: url('images/kulhad-tea.png');"></div>
+                        <div class="featured-body">
+                            <span class="featured-tag"><i class="fa-solid fa-leaf"></i> Hot Favorite</span>
+                            <h3>Kulhad Tea</h3>
+                            <p>Earthy, comforting, and the strongest expression of the cafe’s local identity.</p>
+                            <span class="featured-price">Rs. 20</span>
+                        </div>
+                    </article>
+
+                    <article class="featured-item" data-reveal>
+                        <div class="featured-media" style="background-image: url('images/cheese-maggi.png');"></div>
+                        <div class="featured-body">
+                            <span class="featured-tag"><i class="fa-solid fa-bowl-food"></i> Quick Bite</span>
+                            <h3>Veg Peri Peri Cheese Maggi</h3>
+                            <p>A high-crave snack pick for students, groups, and evening hangouts.</p>
+                            <span class="featured-price">Rs. 60</span>
+                        </div>
+                    </article>
+
+                    <article class="featured-item" data-reveal>
+                        <div class="featured-media" style="background-image: url('images/cold-coffee.png');"></div>
+                        <div class="featured-body">
+                            <span class="featured-tag"><i class="fa-solid fa-snowflake"></i> Cold Pick</span>
+                            <h3>Cold Coffee With Ice Cream</h3>
+                            <p>For customers who want something richer, colder, and more indulgent than a regular brew.
+                            </p>
+                            <span class="featured-price">Rs. 80</span>
+                        </div>
+                    </article>
+
+                    <article class="featured-item" data-reveal>
+                        <div class="featured-media" style="background-image: url('images/bombay-sandwich.png');">
+                        </div>
+                        <div class="featured-body">
+                            <span class="featured-tag"><i class="fa-solid fa-bread-slice"></i> Toasted</span>
+                            <h3>Bombay Cheese Sandwich</h3>
+                            <p>Classic street-style comfort with enough substance to make it a repeat order.</p>
+                            <span class="featured-price">Rs. 70</span>
+                        </div>
+                    </article>
+
+                    <article class="featured-item" data-reveal>
+                        <div class="featured-media" style="background-image: url('images/kulhad-coffee.png');"></div>
+                        <div class="featured-body">
+                            <span class="featured-tag"><i class="fa-solid fa-mug-saucer"></i> Warm Brew</span>
+                            <h3>Kulhad Coffee</h3>
+                            <p>The coffee version of the signature serve, with a little more ritual and character.</p>
+                            <span class="featured-price">Rs. 25</span>
+                        </div>
+                    </article>
+
+                    <article class="featured-item" data-reveal>
+                        <div class="featured-media" style="background-image: url('images/fresh-lime-soda.png');"></div>
+                        <div class="featured-body">
+                            <span class="featured-tag"><i class="fa-solid fa-citrus"></i> Cooler</span>
+                            <h3>Fresh Lime Soda</h3>
+                            <p>A sharp, refreshing counterpoint to the heavier snack side of the menu.</p>
+                            <span class="featured-price">Rs. 30</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section menu-section" id="menu">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <div>
+                        <p class="section-kicker">Full Menu</p>
+                        <h2 class="section-title">Cleaner to read, faster to choose from.</h2>
+                    </div>
+                    <p class="section-copy">
+                        The menu is grouped into clear categories and still keeps all the original items and prices. Use
+                        the filters to narrow it fast.
+                    </p>
+                </div>
+
+                <div class="filter-row" id="menu-filters" data-reveal>
+                    <button class="filter-button is-active" data-filter="all" type="button"
+                        aria-pressed="true">All</button>
+                    <button class="filter-button" data-filter="hot-beverages" type="button" aria-pressed="false">Hot
+                        Beverages</button>
+                    <button class="filter-button" data-filter="snacks" type="button"
+                        aria-pressed="false">Snacks</button>
+                    <button class="filter-button" data-filter="cold-beverages" type="button" aria-pressed="false">Cold
+                        Drinks</button>
+                </div>
+
+                <div class="menu-grid">
+                    <article class="menu-category" data-category="hot-beverages" data-reveal>
+                        <h3>Tea</h3>
+                        <p class="category-note">The everyday base of the cafe, from simple regular tea to the kulhad
+                            version people remember.</p>
+                        <ul class="menu-list">
+                            <li><span class="menu-item-copy"><strong>Regular Tea</strong></span><em>Rs. 10</em></li>
+                            <li><span class="menu-item-copy"><strong>Black Tea</strong></span><em>Rs. 10</em></li>
+                            <li><span class="menu-item-copy"><strong>Lemon / Sugar Free Tea</strong></span><em>Rs.
+                                    10</em></li>
+                            <li><span class="menu-item-copy"><strong>Kulhad Tea</strong></span><em>Rs. 20</em></li>
+                            <li><span class="menu-item-copy"><strong>Tulsi / Jaggery / Green Tea</strong></span><em>Rs.
+                                    20</em></li>
+                        </ul>
+                    </article>
+
+                    <article class="menu-category" data-category="hot-beverages" data-reveal>
+                        <h3>Hot Coffee</h3>
+                        <p class="category-note">Simple coffee options for people who want heat, caffeine, and a
+                            straightforward order.</p>
+                        <ul class="menu-list">
+                            <li><span class="menu-item-copy"><strong>Hot Coffee</strong></span><em>Rs. 20</em></li>
+                            <li><span class="menu-item-copy"><strong>Black Coffee</strong></span><em>Rs. 20</em></li>
+                            <li><span class="menu-item-copy"><strong>Sugar Free Coffee</strong></span><em>Rs. 20</em>
+                            </li>
+                            <li>
+                                <span class="menu-item-copy">
+                                    <strong>Kulhad Coffee</strong>
+                                    <span>Special mud cup serving</span>
+                                </span>
+                                <em>Rs. 25</em>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="menu-category" data-category="snacks" data-reveal>
+                        <h3>Maggi & Fries</h3>
+                        <p class="category-note">The quick-bite side of the cafe, with entry-level comfort food and
+                            loaded upgrades.</p>
+                        <ul class="menu-list">
+                            <li><span class="menu-item-copy"><strong>Plain Maggi</strong></span><em>Rs. 40</em></li>
+                            <li><span class="menu-item-copy"><strong>Vegetable Maggi</strong></span><em>Rs. 50</em></li>
+                            <li><span class="menu-item-copy"><strong>Veg Peri Peri Cheese Maggi</strong></span><em>Rs.
+                                    60</em></li>
+                            <li><span class="menu-item-copy"><strong>Cheese Garlic / Veg Paneer
+                                        Maggi</strong></span><em>Rs. 80</em></li>
+                            <li><span class="menu-item-copy"><strong>French Fries</strong></span><em>Rs. 60</em></li>
+                            <li><span class="menu-item-copy"><strong>French Fries (Peri Peri)</strong></span><em>Rs.
+                                    70</em></li>
+                            <li><span class="menu-item-copy"><strong>French Fries (Cheese)</strong></span><em>Rs.
+                                    80</em></li>
+                        </ul>
+                    </article>
+
+                    <article class="menu-category" data-category="snacks" data-reveal>
+                        <h3>Sandwiches</h3>
+                        <p class="category-note">Easy-to-order toasted options that work for lunch breaks, evening
+                            bites, and shared orders.</p>
+                        <ul class="menu-list">
+                            <li><span class="menu-item-copy"><strong>Veg Sandwich</strong></span><em>Rs. 50</em></li>
+                            <li><span class="menu-item-copy"><strong>Veg Cheese Sandwich</strong></span><em>Rs. 60</em>
+                            </li>
+                            <li><span class="menu-item-copy"><strong>Bombay Masala Sandwich</strong></span><em>Rs.
+                                    60</em></li>
+                            <li><span class="menu-item-copy"><strong>Cheese Corn Sandwich</strong></span><em>Rs. 60</em>
+                            </li>
+                            <li><span class="menu-item-copy"><strong>Bombay Cheese Sandwich</strong></span><em>Rs.
+                                    70</em></li>
+                            <li><span class="menu-item-copy"><strong>Peri Peri Cheese Corn
+                                        Sandwich</strong></span><em>Rs. 70</em></li>
+                        </ul>
+                    </article>
+
+                    <article class="menu-category" data-category="cold-beverages" data-reveal>
+                        <h3>Cold Coffee & Shakes</h3>
+                        <p class="category-note">A stronger visual category now, since these items do a lot of work for
+                            impulse orders.</p>
+                        <ul class="menu-list">
+                            <li><span class="menu-item-copy"><strong>Regular Cold Coffee</strong></span><em>Rs. 60</em>
+                            </li>
+                            <li><span class="menu-item-copy"><strong>Cold Coffee With Ice Cream</strong></span><em>Rs.
+                                    80</em></li>
+                            <li><span class="menu-item-copy"><strong>Oreo Milk Shake</strong></span><em>Rs. 80</em></li>
+                            <li><span class="menu-item-copy"><strong>Chocolate Milk Shake</strong></span><em>Rs. 80</em>
+                            </li>
+                            <li><span class="menu-item-copy"><strong>Kit Kat Milk Shake</strong></span><em>Rs. 80</em>
+                            </li>
+                            <li><span class="menu-item-copy"><strong>Butterscotch / Vanilla / Strawberry
+                                        Shake</strong></span><em>Rs. 80</em></li>
+                        </ul>
+                    </article>
+
+                    <article class="menu-category" data-category="cold-beverages" data-reveal>
+                        <h3>Mocktails & Soda</h3>
+                        <p class="category-note">Lighter refreshers that balance out the heavier snack menu and work
+                            well in warmer weather.</p>
+                        <ul class="menu-list">
+                            <li><span class="menu-item-copy"><strong>Virgin / Blue Lagoon / Orange
+                                        Mojito</strong></span><em>Rs. 60</em></li>
+                            <li><span class="menu-item-copy"><strong>Plain Soda</strong></span><em>Rs. 10</em></li>
+                            <li><span class="menu-item-copy"><strong>Fresh Lime Soda</strong></span><em>Rs. 30</em></li>
+                            <li><span class="menu-item-copy"><strong>Masala Coldrink Soda</strong></span><em>Rs. 30</em>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head" data-reveal>
+                    <div>
+                        <p class="section-kicker">How People Use It</p>
+                        <h2 class="section-title">Three easy ways to order at Sonu Cafe.</h2>
+                    </div>
+                    <p class="section-copy">
+                        From a quick tea stop to a group snack order, the menu fits different moods without getting
+                        complicated.
+                    </p>
+                </div>
+
+                <div class="moods-grid">
+                    <article class="mood-card" data-reveal>
+                        <span class="mood-number">01</span>
+                        <h3>Quick chai break</h3>
+                        <p>Fast, affordable, familiar. The kind of stop that starts with tea and maybe picks up fries on
+                            the side.</p>
+                        <span class="mood-pairing">Pair it with Kulhad Tea + Plain Soda</span>
+                    </article>
+
+                    <article class="mood-card" data-reveal>
+                        <span class="mood-number">02</span>
+                        <h3>Snack stop with friends</h3>
+                        <p>Loaded Maggi, sandwiches, coffee, and enough options to keep a small group ordering without
+                            overthinking it.</p>
+                        <span class="mood-pairing">Pair it with Cheese Maggi + Sandwiches</span>
+                    </article>
+
+                    <article class="mood-card" data-reveal>
+                        <span class="mood-number">03</span>
+                        <h3>Cool-down order</h3>
+                        <p>Cold coffee, milk shakes, and lime soda give the menu a proper refresh section instead of
+                            ending at hot drinks.</p>
+                        <span class="mood-pairing">Pair it with Cold Coffee + Fresh Lime Soda</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="visit">
+            <div class="container visit-grid">
+                <article class="visit-card" data-reveal>
+                    <p class="section-kicker">Visit the Cafe</p>
+                    <h2 class="visit-title">Easy to find. Even easier to order from.</h2>
+                    <p>
+                        Whether you want to sit down for tea or just call ahead and collect your order, Sonu Cafe keeps
+                        it simple. Stop by, call ahead, or message on WhatsApp.
+                    </p>
+
+                    <ul class="visit-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <strong>Location</strong>
+                                <span>Sonu Cafe Utai, In front of shubham K-Mart, Utai.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <span><a href="tel:+918103726668">8103726668</a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <strong>Working Hours</strong>
+                                <span>Open all days in a week and tiimng is 9Am to 10:30 Pm.</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="hero-actions" style="margin-top: 1.6rem;">
+                        <a class="button button-primary" href="https://maps.google.com/?q=Shubham+K+Mart+Utai+Bhilai"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="fa-solid fa-route"></i> Get Directions
+                        </a>
+                        <a class="button button-whatsapp"
+                            href="https://wa.me/918103726668?text=Hello%20Sonu%20Cafe!%20I%20would%20like%20to%20order..."
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-whatsapp"></i> WhatsApp Order
+                        </a>
+                    </div>
+                </article>
+
+                <article class="map-card" data-reveal>
+                    <div class="map-card-inner">
+                        <span class="map-dot"><i class="fa-solid fa-store"></i></span>
+                        <h3>Follow the mood, pick the order, and head over.</h3>
+                        <p>
+                            Kulhad tea for comfort, Maggi for cravings, sandwiches for a quick bite, and cold drinks
+                            when you want something lighter.
+                        </p>
+                        <div class="footer-actions">
+                            <a class="button button-secondary" href="#favorites">
+                                <i class="fa-solid fa-camera-retro"></i> See the Highlights
+                            </a>
+                            <a class="button button-primary" href="#menu">
+                                <i class="fa-solid fa-list"></i> Browse All Items
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-bar">
+            <div>
+                <a href="#home" class="brand" aria-label="Back to top">
+                    <span class="brand-mark">sonu</span><span class="brand-accent">cafe</span>
+                </a>
+                <p class="footer-copy">Fresh brewed coffee and bites in Utai, Bhilai. Kulhad tea, comfort snacks, and
+                    quick pickup orders.</p>
+            </div>
+            <div class="footer-actions">
+                <a class="button button-secondary" href="https://instagram.com/sonu_cafe_utai" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-instagram"></i> @sonu_cafe_utai
+                </a>
+                <a class="button button-secondary" href="tel:+918103726668">
+                    <i class="fa-solid fa-phone"></i> 8103726668
+                </a>
+                <a class="button button-whatsapp"
+                    href="https://wa.me/918103726668?text=Hello%20Sonu%20Cafe!%20I%20would%20like%20to%20order..."
+                    target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i> Order Now
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+
+        const setMenuState = (isOpen) => {
+            mobileMenu.hidden = !isOpen;
+            mobileMenu.classList.toggle("is-open", isOpen);
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.innerHTML = isOpen
+                ? '<i class="fa-solid fa-xmark"></i>'
+                : '<i class="fa-solid fa-bars"></i>';
+        };
+
+        menuToggle.addEventListener("click", () => {
+            const nextState = menuToggle.getAttribute("aria-expanded") !== "true";
+            setMenuState(nextState);
+        });
+
+        mobileLinks.forEach((link) => {
+            link.addEventListener("click", () => setMenuState(false));
+        });
+
+        const filterButtons = document.querySelectorAll(".filter-button");
+        const categories = document.querySelectorAll(".menu-category");
+
+        filterButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const filter = button.dataset.filter;
+
+                filterButtons.forEach((item) => {
+                    const active = item === button;
+                    item.classList.toggle("is-active", active);
+                    item.setAttribute("aria-pressed", String(active));
+                });
+
+                categories.forEach((category) => {
+                    const visible = filter === "all" || category.dataset.category === filter;
+                    category.hidden = !visible;
+                });
+            });
+        });
+
+        const revealItems = document.querySelectorAll("[data-reveal]");
+
+        if ("IntersectionObserver" in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.14
+            });
+
+            revealItems.forEach((item) => observer.observe(item));
+        } else {
+            revealItems.forEach((item) => item.classList.add("is-visible"));
+        }
+    </script>
+</body>
+
+</html>
