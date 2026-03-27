@@ -888,8 +888,8 @@ button {
 .filter-button.is-active {
     background: linear-gradient(135deg, var(--saffron), #f6cf72);
     border-color: transparent;
-    color: var(--coffee-deep);
-    font-weight: 700;
+    color: #111111;
+    font-weight: 800;
 }
 
 .menu-grid {
