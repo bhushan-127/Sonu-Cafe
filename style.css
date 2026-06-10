@@ -852,6 +852,7 @@ button {
 }
 
 .menu-section {
+    scroll-margin-top: 90px;
     background:
         radial-gradient(circle at top right, rgba(255, 215, 0, 0.12), transparent 22%),
         linear-gradient(180deg, #1c1c1c, #111111);
@@ -912,6 +913,7 @@ button {
 }
 
 .menu-grid {
+    scroll-margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem 2rem;
