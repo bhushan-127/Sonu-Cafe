@@ -129,10 +129,10 @@
                     <article class="bento-card bento-list">
                         <h3>Try these first</h3>
                         <ul class="sleek-list">
-                            <li><strong>Kulhad Tea</strong><span>Rs. 20</span></li>
-                            <li><strong>Veg Peri Peri Maggi</strong><span>Rs. 60</span></li>
-                            <li><strong>Bombay Sandwich</strong><span>Rs. 70</span></li>
-                            <li><strong>Cold Coffee</strong><span>Rs. 80</span></li>
+                            <li><strong>Regular / Kulhad Tea</strong><span>Rs. 10 / 20</span></li>
+                            <li><strong>Veg Cheese Maggi</strong><span>Rs. 80</span></li>
+                            <li><strong>Veg Cheese Sandwich</strong><span>Rs. 70</span></li>
+                            <li><strong>Regular Cold Coffee</strong><span>Rs. 80</span></li>
                         </ul>
                     </article>
                     
@@ -256,9 +256,9 @@
                         <div class="featured-media" style="background-image: url('images/cheese-maggi.png');"></div>
                         <div class="featured-body">
                             <span class="featured-tag"><i class="fa-solid fa-bowl-food"></i> Quick Bite</span>
-                            <h3>Veg Peri Peri Cheese Maggi</h3>
+                            <h3>Veg Cheese Maggi</h3>
                             <p>A high-crave snack pick for students, groups, and evening hangouts.</p>
-                            <span class="featured-price">Rs. 60</span>
+                            <span class="featured-price">Rs. 80</span>
                         </div>
                     </article>
 
@@ -269,7 +269,7 @@
                             <h3>Cold Coffee With Ice Cream</h3>
                             <p>For customers who want something richer, colder, and more indulgent than a regular brew.
                             </p>
-                            <span class="featured-price">Rs. 80</span>
+                            <span class="featured-price">Rs. 99</span>
                         </div>
                     </article>
 
@@ -278,7 +278,7 @@
                         </div>
                         <div class="featured-body">
                             <span class="featured-tag"><i class="fa-solid fa-bread-slice"></i> Toasted</span>
-                            <h3>Bombay Cheese Sandwich</h3>
+                            <h3>Veg Cheese Sandwich</h3>
                             <p>Classic street-style comfort with enough substance to make it a repeat order.</p>
                             <span class="featured-price">Rs. 70</span>
                         </div>
@@ -300,7 +300,7 @@
                             <span class="featured-tag"><i class="fa-solid fa-citrus"></i> Cooler</span>
                             <h3>Fresh Lime Soda</h3>
                             <p>A sharp, refreshing counterpoint to the heavier snack side of the menu.</p>
-                            <span class="featured-price">Rs. 30</span>
+                            <span class="featured-price">Rs. 40</span>
                         </div>
                     </article>
                 </div>
@@ -311,128 +311,619 @@
             <div class="container">
                 <div class="section-head" data-reveal>
                     <div>
-                        <p class="section-kicker">Full Menu</p>
+                        <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.85rem;">
+                            <p class="section-kicker" style="margin: 0;">Full Menu</p>
+                            <span class="veg-badge"><span class="veg-dot"></span> 100% Pure Veg</span>
+                        </div>
                         <h2 class="section-title">Cleaner to read, faster to choose from.</h2>
                     </div>
                     <p class="section-copy">
-                        The menu is grouped into clear categories and still keeps all the original items and prices. Use
+                        The menu is grouped into clear categories matching our new physical menu. Use
                         the filters to narrow it fast.
                     </p>
                 </div>
 
                 <div class="filter-row" id="menu-filters" data-reveal>
                     <button class="filter-button is-active" data-filter="all" type="button"
-                        aria-pressed="true">All</button>
-                    <button class="filter-button" data-filter="hot-beverages" type="button" aria-pressed="false">Hot
-                        Beverages</button>
+                        aria-pressed="true"><i class="fa-solid fa-border-all"></i> All</button>
+                    <button class="filter-button" data-filter="hot-beverages" type="button" aria-pressed="false"><i class="fa-solid fa-mug-hot"></i> Hot Beverages</button>
                     <button class="filter-button" data-filter="snacks" type="button"
-                        aria-pressed="false">Snacks</button>
-                    <button class="filter-button" data-filter="cold-beverages" type="button" aria-pressed="false">Cold
-                        Drinks</button>
+                        aria-pressed="false"><i class="fa-solid fa-utensils"></i> Snacks</button>
+                    <button class="filter-button" data-filter="cold-beverages" type="button" aria-pressed="false"><i class="fa-solid fa-snowflake"></i> Cold Drinks</button>
+                    <button class="filter-button" data-filter="combos" type="button" aria-pressed="false"><i class="fa-solid fa-gift"></i> Combos</button>
                 </div>
 
                 <div class="menu-grid">
-                    <article class="menu-category" data-category="hot-beverages" data-reveal>
-                        <h3>Tea</h3>
-                        <p class="category-note">The everyday base of the cafe, from simple regular tea to the kulhad
-                            version people remember.</p>
-                        <ul class="menu-list">
-                            <li><span class="menu-item-copy"><strong>Regular Tea</strong></span><em>Rs. 10</em></li>
-                            <li><span class="menu-item-copy"><strong>Black Tea</strong></span><em>Rs. 10</em></li>
-                            <li><span class="menu-item-copy"><strong>Lemon / Sugar Free Tea</strong></span><em>Rs.
-                                    10</em></li>
-                            <li><span class="menu-item-copy"><strong>Kulhad Tea</strong></span><em>Rs. 20</em></li>
-                            <li><span class="menu-item-copy"><strong>Tulsi / Jaggery / Green Tea</strong></span><em>Rs.
-                                    20</em></li>
-                        </ul>
-                    </article>
+                    <h3 class="menu-group-title" data-category="hot-beverages" data-reveal>
+                        <i class="fa-solid fa-fire-flame-curved" style="color: var(--saffron);"></i> Hot Beverages
+                    </h3>
 
                     <article class="menu-category" data-category="hot-beverages" data-reveal>
-                        <h3>Hot Coffee</h3>
-                        <p class="category-note">Simple coffee options for people who want heat, caffeine, and a
-                            straightforward order.</p>
+                        <div class="category-info-panel">
+                            <h3><i class="fa-solid fa-mug-hot" style="color: var(--saffron);"></i> Tea</h3>
+                            <p class="category-note">Traditional hot brews, from everyday regular tea to signature kulhad servings.</p>
+                        </div>
                         <ul class="menu-list">
-                            <li><span class="menu-item-copy"><strong>Hot Coffee</strong></span><em>Rs. 20</em></li>
-                            <li><span class="menu-item-copy"><strong>Black Coffee</strong></span><em>Rs. 20</em></li>
-                            <li><span class="menu-item-copy"><strong>Sugar Free Coffee</strong></span><em>Rs. 20</em>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Regular Tea
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 10</span>
+                                </div>
                             </li>
                             <li>
-                                <span class="menu-item-copy">
-                                    <strong>Kulhad Coffee</strong>
-                                    <span>Special mud cup serving</span>
-                                </span>
-                                <em>Rs. 25</em>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Black Tea
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 15</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Lemon Tea
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 15</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Green Tea
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 20</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Kulhad Tea
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 20</span>
+                                </div>
+                                <span class="menu-item-desc">Served in traditional mud cups for an earthy aroma</span>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="menu-category" data-category="hot-beverages" data-reveal>
+                        <div class="category-info-panel">
+                            <h3><i class="fa-solid fa-mug-saucer" style="color: var(--saffron);"></i> Coffee & Hot Milk</h3>
+                            <p class="category-note">Earthy coffee brews and comforting milk drinks to keep you energized.</p>
+                        </div>
+                        <ul class="menu-list">
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Hot Coffee
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 20</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Black Coffee
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 20</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Kulhad Coffee
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 25</span>
+                                </div>
+                                <span class="menu-item-desc">Coffee served with rich mud cup ritual</span>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Hot Milk
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 30</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Horlicks
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 40</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Hot Chocolate Milk
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 40</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <h3 class="menu-group-title" data-category="snacks" data-reveal>
+                        <i class="fa-solid fa-cookie" style="color: var(--saffron);"></i> Snacks & Bites
+                    </h3>
+
+                    <article class="menu-category" data-category="snacks" data-reveal>
+                        <div class="category-info-panel">
+                            <h3><i class="fa-solid fa-bowl-food" style="color: var(--saffron);"></i> Maggi</h3>
+                            <p class="category-note">Your favorite street-style instant noodles with cheese, paneer, and garlic upgrades.</p>
+                        </div>
+                        <ul class="menu-list">
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Plain Maggi
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 50</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Vegetable Maggi
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 60</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Schezwan Maggi
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 80</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Veg Cheese Maggi
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 80</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Veg Cheese Corn Maggi
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 80</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Veg Paneer Maggi
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 99</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Veg Cheese Garlic Maggi
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 99</span>
+                                </div>
                             </li>
                         </ul>
                     </article>
 
                     <article class="menu-category" data-category="snacks" data-reveal>
-                        <h3>Maggi & Fries</h3>
-                        <p class="category-note">The quick-bite side of the cafe, with entry-level comfort food and
-                            loaded upgrades.</p>
+                        <div class="category-info-panel">
+                            <h3><i class="fa-solid fa-stroopwafel" style="color: var(--saffron);"></i> French Fries</h3>
+                            <p class="category-note">Crispy, golden fries tossed in classic salty, peri peri, or loaded cheese styles.</p>
+                        </div>
                         <ul class="menu-list">
-                            <li><span class="menu-item-copy"><strong>Plain Maggi</strong></span><em>Rs. 40</em></li>
-                            <li><span class="menu-item-copy"><strong>Vegetable Maggi</strong></span><em>Rs. 50</em></li>
-                            <li><span class="menu-item-copy"><strong>Veg Peri Peri Cheese Maggi</strong></span><em>Rs.
-                                    60</em></li>
-                            <li><span class="menu-item-copy"><strong>Cheese Garlic / Veg Paneer
-                                        Maggi</strong></span><em>Rs. 80</em></li>
-                            <li><span class="menu-item-copy"><strong>French Fries</strong></span><em>Rs. 60</em></li>
-                            <li><span class="menu-item-copy"><strong>French Fries (Peri Peri)</strong></span><em>Rs.
-                                    70</em></li>
-                            <li><span class="menu-item-copy"><strong>French Fries (Cheese)</strong></span><em>Rs.
-                                    80</em></li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> French Fries Salty
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 70</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> French Fries Peri Peri
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 80</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> French Fries Cheese & Spicy
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 99</span>
+                                </div>
+                            </li>
                         </ul>
                     </article>
 
                     <article class="menu-category" data-category="snacks" data-reveal>
-                        <h3>Sandwiches</h3>
-                        <p class="category-note">Easy-to-order toasted options that work for lunch breaks, evening
-                            bites, and shared orders.</p>
+                        <div class="category-info-panel">
+                            <h3><i class="fa-solid fa-bread-slice" style="color: var(--saffron);"></i> Sandwiches</h3>
+                            <p class="category-note">Freshly grilled sandwiches, toasted to perfection with cheese and peri peri fillings.</p>
+                        </div>
                         <ul class="menu-list">
-                            <li><span class="menu-item-copy"><strong>Veg Sandwich</strong></span><em>Rs. 50</em></li>
-                            <li><span class="menu-item-copy"><strong>Veg Cheese Sandwich</strong></span><em>Rs. 60</em>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Veg Sandwich
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 60</span>
+                                </div>
                             </li>
-                            <li><span class="menu-item-copy"><strong>Bombay Masala Sandwich</strong></span><em>Rs.
-                                    60</em></li>
-                            <li><span class="menu-item-copy"><strong>Cheese Corn Sandwich</strong></span><em>Rs. 60</em>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Coleslaw Sandwich
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 70</span>
+                                </div>
                             </li>
-                            <li><span class="menu-item-copy"><strong>Bombay Cheese Sandwich</strong></span><em>Rs.
-                                    70</em></li>
-                            <li><span class="menu-item-copy"><strong>Peri Peri Cheese Corn
-                                        Sandwich</strong></span><em>Rs. 70</em></li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Veg Cheese Sandwich
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 70</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Cheese Corn Sandwich
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 70</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Bombay Masala Sandwich
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 80</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Veg Cheese Peri Peri Sandwich
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 80</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Cheese Corn Peri Peri Sandwich
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 80</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Chocolate Sandwich
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 80</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Paneer Veg Cheese Sandwich
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 99</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Mexican Sandwich
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 99</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <h3 class="menu-group-title" data-category="cold-beverages" data-reveal>
+                        <i class="fa-solid fa-snowflake" style="color: var(--saffron);"></i> Cold Drinks & Shakes
+                    </h3>
+
+                    <article class="menu-category" data-category="cold-beverages" data-reveal>
+                        <div class="category-info-panel">
+                            <h3><i class="fa-solid fa-ice-cream" style="color: var(--saffron);"></i> Milk Shakes</h3>
+                            <p class="category-note">Indulgent, creamy shakes prepared with your favorite cookies and chocolate flavors.</p>
+                        </div>
+                        <ul class="menu-list">
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Oreo Milk Shake
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 99</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Chocolate Milk Shake
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 99</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Kit Kat Milk Shake
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 99</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Vanilla Milk Shake
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 99</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Butterscotch Milk Shake
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 99</span>
+                                </div>
+                            </li>
                         </ul>
                     </article>
 
                     <article class="menu-category" data-category="cold-beverages" data-reveal>
-                        <h3>Cold Coffee & Shakes</h3>
-                        <p class="category-note">A stronger visual category now, since these items do a lot of work for
-                            impulse orders.</p>
+                        <div class="category-info-panel">
+                            <h3><i class="fa-solid fa-glass-water" style="color: var(--saffron);"></i> Cold Coffee</h3>
+                            <p class="category-note">Chilled coffee blends, served sweet or topped with vanilla ice cream.</p>
+                        </div>
                         <ul class="menu-list">
-                            <li><span class="menu-item-copy"><strong>Regular Cold Coffee</strong></span><em>Rs. 60</em>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Regular Cold Coffee
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 80</span>
+                                </div>
                             </li>
-                            <li><span class="menu-item-copy"><strong>Cold Coffee With Ice Cream</strong></span><em>Rs.
-                                    80</em></li>
-                            <li><span class="menu-item-copy"><strong>Oreo Milk Shake</strong></span><em>Rs. 80</em></li>
-                            <li><span class="menu-item-copy"><strong>Chocolate Milk Shake</strong></span><em>Rs. 80</em>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Cold Coffee With Ice Cream
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 99</span>
+                                </div>
                             </li>
-                            <li><span class="menu-item-copy"><strong>Kit Kat Milk Shake</strong></span><em>Rs. 80</em>
-                            </li>
-                            <li><span class="menu-item-copy"><strong>Butterscotch / Vanilla / Strawberry
-                                        Shake</strong></span><em>Rs. 80</em></li>
                         </ul>
                     </article>
 
                     <article class="menu-category" data-category="cold-beverages" data-reveal>
-                        <h3>Mocktails & Soda</h3>
-                        <p class="category-note">Lighter refreshers that balance out the heavier snack menu and work
-                            well in warmer weather.</p>
+                        <div class="category-info-panel">
+                            <h3><i class="fa-solid fa-martini-glass-citrus" style="color: var(--saffron);"></i> Mocktails</h3>
+                            <p class="category-note">Refreshing, bubbly mocktails served in sweet, sour, and citrus flavors.</p>
+                        </div>
                         <ul class="menu-list">
-                            <li><span class="menu-item-copy"><strong>Virgin / Blue Lagoon / Orange
-                                        Mojito</strong></span><em>Rs. 60</em></li>
-                            <li><span class="menu-item-copy"><strong>Plain Soda</strong></span><em>Rs. 10</em></li>
-                            <li><span class="menu-item-copy"><strong>Fresh Lime Soda</strong></span><em>Rs. 30</em></li>
-                            <li><span class="menu-item-copy"><strong>Masala Coldrink Soda</strong></span><em>Rs. 30</em>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Virgin Mojito
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 80</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Blue Lagoon Mojito
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 80</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Orange Mojito
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 80</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="menu-category" data-category="cold-beverages" data-reveal>
+                        <div class="category-info-panel">
+                            <h3><i class="fa-solid fa-glass-water-droplet" style="color: var(--saffron);"></i> Soda Special</h3>
+                            <p class="category-note">Chilled refreshers and sodas to balance out your quick bites.</p>
+                        </div>
+                        <ul class="menu-list">
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Fresh Lime Water
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 30</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Fresh Lime Soda
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 40</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Masala Cold Drink
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 50</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <h3 class="menu-group-title" data-category="combos" data-reveal>
+                        <i class="fa-solid fa-gift" style="color: var(--saffron);"></i> Combo Specials
+                    </h3>
+
+                    <article class="menu-category" data-category="combos" data-reveal>
+                        <div class="category-info-panel">
+                            <h3><i class="fa-solid fa-box-open" style="color: var(--saffron);"></i> Combo Packs</h3>
+                            <p class="category-note">Budget-friendly snacks paired with cool sodas or rich milkshakes.</p>
+                        </div>
+                        <ul class="menu-list">
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Masala Coldrink + French Fries
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 99</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Veg Sandwich + Masala Coldrink
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 99</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Maggi Veg + Masala Coldrink
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 99</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Cheese Corn Sandwich Peri Peri + Cold Coffee / Mocktail
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 149</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Maggi Veg Cheese + Cold Coffee / Mocktail
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 149</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> French Fries + Milk Shake
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 149</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="menu-category" data-category="combos" data-reveal>
+                        <div class="category-info-panel">
+                            <h3><i class="fa-solid fa-crown" style="color: var(--saffron);"></i> Jumbo Combo Packs</h3>
+                            <p class="category-note">Larger portions and complete meals for the ultimate hunger.</p>
+                        </div>
+                        <ul class="menu-list">
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Veg Sandwich + French Fries + Milk Shake
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 199</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Mexican Sandwich + French Fries Peri Peri + Milk Shake
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 249</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="menu-item-main">
+                                    <span class="menu-item-name">
+                                        <span class="veg-icon"><span class="veg-dot-inner"></span></span> Paneer Maggi + Paneer Sandwich + Mocktail
+                                    </span>
+                                    <span class="menu-item-dots"></span>
+                                    <span class="menu-item-price">Rs. 249</span>
+                                </div>
                             </li>
                         </ul>
                     </article>
@@ -459,7 +950,7 @@
                         <h3>Quick chai break</h3>
                         <p>Fast, affordable, familiar. The kind of stop that starts with tea and maybe picks up fries on
                             the side.</p>
-                        <span class="mood-pairing">Pair it with Kulhad Tea + Plain Soda</span>
+                        <span class="mood-pairing">Pair it with Kulhad Tea + Fresh Lime Soda</span>
                     </article>
 
                     <article class="mood-card" data-reveal>
@@ -467,7 +958,7 @@
                         <h3>Snack stop with friends</h3>
                         <p>Loaded Maggi, sandwiches, coffee, and enough options to keep a small group ordering without
                             overthinking it.</p>
-                        <span class="mood-pairing">Pair it with Cheese Maggi + Sandwiches</span>
+                        <span class="mood-pairing">Pair it with Veg Cheese Maggi + Sandwiches</span>
                     </article>
 
                     <article class="mood-card" data-reveal>
@@ -600,7 +1091,7 @@
         });
 
         const filterButtons = document.querySelectorAll(".filter-button");
-        const categories = document.querySelectorAll(".menu-category");
+        const categories = document.querySelectorAll(".menu-category, .menu-group-title");
 
         filterButtons.forEach((button) => {
             button.addEventListener("click", () => {
