@@ -1097,15 +1097,42 @@
             button.addEventListener("click", () => {
                 const filter = button.dataset.filter;
 
+                // Update active button state
                 filterButtons.forEach((item) => {
                     const active = item === button;
                     item.classList.toggle("is-active", active);
                     item.setAttribute("aria-pressed", String(active));
                 });
 
+                // Scroll directly to the menu items grid, accounting for sticky header offset
+                const menuGrid = document.querySelector(".menu-grid");
+                if (menuGrid) {
+                    menuGrid.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+
+                // Staggered reveal animation for matching categories
+                let delay = 0;
                 categories.forEach((category) => {
                     const visible = filter === "all" || category.dataset.category === filter;
-                    category.hidden = !visible;
+                    
+                    if (visible) {
+                        // Temporarily remove classes to trigger fade-in slide-up transition
+                        category.classList.remove("is-visible");
+                        category.hidden = false;
+                        
+                        // Force a reflow
+                        void category.offsetWidth;
+                        
+                        const currentDelay = delay;
+                        setTimeout(() => {
+                            category.classList.add("is-visible");
+                        }, 50 + currentDelay);
+                        
+                        delay += 60; // 60ms stagger delay for smooth sequential reveal
+                    } else {
+                        category.classList.remove("is-visible");
+                        category.hidden = true;
+                    }
                 });
             });
         });
