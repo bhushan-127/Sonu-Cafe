@@ -121,12 +121,12 @@
            HERO
         ============================================================ */
         .hero {
-            height: 440px;
+            height: 330px;
             position: relative;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            padding: 0 0 36px;
+            padding: 0 0 28px;
             color: #fff;
             overflow: hidden;
         }
@@ -138,16 +138,21 @@
             background-size: cover;
             background-position: center;
             will-change: transform;
-            transition: transform 8s linear;
+            animation: slowZoom 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes slowZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.08); }
         }
 
         .hero-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(175deg,
-                    rgba(0, 0, 0, 0.08) 0%,
-                    rgba(0, 0, 0, 0.55) 45%,
-                    rgba(0, 0, 0, 0.88) 100%);
+            background: linear-gradient(180deg,
+                    rgba(0, 0, 0, 0.1) 0%,
+                    rgba(0, 0, 0, 0.4) 30%,
+                    rgba(0, 0, 0, 0.9) 100%);
         }
 
         /* Top bar sits INSIDE the hero — no interruption of content below */
@@ -160,112 +165,121 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            padding: 18px 22px;
+            padding: 16px 20px;
         }
 
         .theme-toggle {
-            width: 42px;
-            height: 42px;
-            border: 1.5px solid rgba(255, 255, 255, 0.25);
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             color: #fff;
-            font-size: 16px;
+            font-size: 15px;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
         }
 
         .theme-toggle:hover {
-            background: rgba(255, 255, 255, 0.22);
-            transform: scale(1.08) rotate(15deg);
-            border-color: rgba(255, 255, 255, 0.45);
+            background: rgba(255, 255, 255, 0.25);
+            transform: scale(1.1) rotate(15deg);
+            border-color: rgba(255, 255, 255, 0.5);
         }
 
         /* hero content */
         .hero-content {
             position: relative;
             z-index: 4;
-            padding: 0 26px;
+            padding: 0 24px;
             animation: fadeInUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
         }
 
         .badge {
             display: inline-flex;
             align-items: center;
-            gap: 7px;
-            background: var(--green);
-            padding: 7px 15px;
-            border-radius: 999px;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.8px;
+            gap: 6px;
+            background: linear-gradient(135deg, var(--green), #2ecc71);
+            padding: 5px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1px;
             text-transform: uppercase;
             width: max-content;
-            margin-bottom: 18px;
-            box-shadow: 0 4px 18px var(--green-glow);
+            margin-bottom: 12px;
+            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.4);
+            border: 1px solid rgba(255,255,255,0.2);
         }
 
         .welcome {
             font-family: 'Playfair Display', serif;
             font-style: italic;
-            font-size: 20px;
-            opacity: 0.92;
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: -2px;
         }
 
         .cafe-name {
             font-family: 'Playfair Display', serif;
-            font-size: 58px;
+            font-size: 48px;
             font-weight: 900;
-            line-height: 1.05;
-            margin-top: 4px;
-            letter-spacing: -1.5px;
-            text-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+            line-height: 1.1;
+            letter-spacing: -1px;
+            background: linear-gradient(to right, #ffffff, #e0e0e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.4);
         }
 
         .tagline {
-            margin-top: 10px;
-            font-size: 15px;
-            font-weight: 400;
-            opacity: 0.82;
-            letter-spacing: 1.5px;
+            margin-top: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            opacity: 0.85;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         .contact {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 24px;
+            gap: 8px;
+            margin-top: 18px;
         }
 
         .contact-chip {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.14);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            padding: 8px 16px;
-            border-radius: 99px;
-            font-size: 13px;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 12px;
+            font-size: 12px;
             font-weight: 600;
-            color: inherit;
+            color: #fff;
             text-decoration: none;
-            transition: background 0.25s;
+            transition: all 0.3s ease;
         }
 
         .contact-chip:hover {
-            background: rgba(255, 255, 255, 0.24);
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         .contact-chip i {
-            font-size: 13px;
-            opacity: 0.85;
+            font-size: 12px;
+            color: var(--accent);
         }
 
         /* ============================================================
@@ -926,6 +940,148 @@
         [data-theme="dark"] .theme-toggle {
             transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
+        /* ============================================================
+           PREMIUM COMBO CAROUSEL
+        ============================================================ */
+        .combo-carousel-wrapper {
+            position: relative;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+        .combo-carousel-track {
+            display: flex;
+            transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform;
+        }
+        .combo-slide {
+            min-width: 100%;
+            padding: 0 4px;
+            box-sizing: border-box;
+        }
+        .combo-slide .combo-card {
+            margin-bottom: 0;
+            border-radius: 22px;
+            overflow: hidden;
+        }
+        /* Carousel Navigation Arrows — positioned on the image area */
+        .carousel-btn {
+            position: absolute;
+            top: 90px;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255,255,255,0.92);
+            color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 5;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+            transition: all 0.25s ease;
+            font-size: 13px;
+        }
+        .carousel-btn:hover {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 4px 20px var(--accent-glow);
+            transform: scale(1.1);
+        }
+        .carousel-btn:active { transform: scale(0.95); }
+        .carousel-btn.prev { left: 10px; }
+        .carousel-btn.next { right: 10px; }
+        [data-theme="dark"] .carousel-btn {
+            background: rgba(15,18,30,0.85);
+            color: #eee;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+        }
+        [data-theme="dark"] .carousel-btn:hover {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+        /* Dot Indicators */
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            padding: 1rem 0 0.25rem;
+        }
+        .carousel-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--border);
+            border: none;
+            cursor: pointer;
+            transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+            padding: 0;
+        }
+        .carousel-dot.active {
+            width: 22px;
+            border-radius: 4px;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            box-shadow: 0 2px 8px var(--accent-glow);
+        }
+        [data-theme="dark"] .carousel-dot {
+            background: rgba(255,255,255,0.1);
+        }
+        [data-theme="dark"] .carousel-dot.active {
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            box-shadow: 0 0 14px var(--accent-glow);
+        }
+        /* Combo card image header */
+        .combo-img-wrap {
+            position: relative;
+            overflow: hidden;
+        }
+        .combo-img-header {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            display: block;
+        }
+        .combo-img-wrap::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: linear-gradient(to top, var(--card), transparent);
+            pointer-events: none;
+        }
+        [data-theme="dark"] .combo-img-wrap::after {
+            background: linear-gradient(to top, var(--card), transparent);
+        }
+        /* Refined card inner spacing */
+        .combo-slide .combo-card .combo-body { padding: 14px 22px 18px; }
+        .combo-slide .combo-card .combo-head { margin-bottom: 10px; }
+        .combo-slide .combo-card .combo-title { font-size: 20px; }
+        .combo-slide .combo-card .combo-items { margin-bottom: 14px; gap: 7px; }
+        .combo-slide .combo-card .combo-items li { font-size: 14px; }
+        .combo-slide .combo-card .combo-footer { padding-top: 14px; }
+        .combo-slide .combo-card .combo-price { font-size: 28px; }
+        .combo-slide .combo-card .combo-label { font-size: 10.5px; letter-spacing: 0.8px; }
+        /* Slide counter badge */
+        .slide-counter {
+            position: absolute;
+            top: 14px;
+            right: 18px;
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            font-size: 11.5px;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            z-index: 6;
+            letter-spacing: 1px;
+            font-family: 'Outfit', sans-serif;
+        }
     </style>
     <noscript>
         <style>
@@ -978,7 +1134,9 @@
             <a href="#combos" class="nav-pill active"><i class="fa-solid fa-gift"></i> Combos</a>
             <a href="#tea" class="nav-pill"><i class="fa-solid fa-mug-hot"></i> Tea</a>
             <a href="#coffee" class="nav-pill"><i class="fa-solid fa-coffee"></i> Coffee</a>
-            <a href="#shake" class="nav-pill"><i class="fa-solid fa-glass-water-droplet"></i> Shakes</a>
+            <a href="#hotmilk" class="nav-pill"><i class="fa-solid fa-mug-saucer"></i> Hot Milk</a>
+            <a href="#shake" class="nav-pill"><i class="fa-solid fa-glass-water-droplet"></i> Milk Shakes</a>
+            <a href="#coldcoffee" class="nav-pill"><i class="fa-solid fa-ice-cream"></i> Cold Coffee</a>
             <a href="#sandwich" class="nav-pill"><i class="fa-solid fa-bread-slice"></i> Sandwich</a>
             <a href="#fries" class="nav-pill"><i class="fa-solid fa-bowl-food"></i> Fries</a>
             <a href="#maggi" class="nav-pill"><i class="fa-solid fa-utensils"></i> Maggi</a>
@@ -991,52 +1149,256 @@
                     alt="Combo Offers" loading="lazy">
                 <div class="section-title-wrap">
                     <h2 class="section-title">Combo Offers</h2>
-                    <span class="section-count">2 deals</span>
+                    <span class="section-count">9 deals</span>
                 </div>
             </div>
             <div class="divider"></div>
 
-            <div class="combo-card reveal reveal-delay-1">
-                <div class="combo-banner"></div>
-                <div class="combo-body">
-                    <div class="combo-head">
-                        <span class="combo-title">Combo Pack</span>
-                        <span class="offer-tag">Combo Offer</span>
-                    </div>
-                    <ul class="combo-items">
-                        <li><span class="dot"></span> Masala Cold Drink</li>
-                        <li><span class="dot"></span> French Fries</li>
-                    </ul>
-                    <div class="combo-footer">
-                        <div class="combo-price-wrap">
-                            <span class="combo-label">Total Price</span>
-                            <span class="combo-price">&#8377;99</span>
-                        </div>
-                        <span class="combo-savings"><i class="fa-solid fa-tag"></i> Save big!</span>
-                    </div>
-                </div>
-            </div>
+            <div class="combo-carousel-wrapper" id="comboCarousel">
+                <span class="slide-counter" id="slideCounter">1 / 9</span>
+                <button class="carousel-btn prev" id="comboPrev" aria-label="Previous combo"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next" id="comboNext" aria-label="Next combo"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="combo-carousel-track" id="comboTrack">
 
-            <div class="combo-card reveal reveal-delay-2">
-                <div class="combo-banner"></div>
-                <div class="combo-body">
-                    <div class="combo-head">
-                        <span class="combo-title">Jumbo Combo</span>
-                        <span class="offer-tag">Best Seller</span>
-                    </div>
-                    <ul class="combo-items">
-                        <li><span class="dot"></span> Veg Sandwich</li>
-                        <li><span class="dot"></span> French Fries</li>
-                        <li><span class="dot"></span> Milk Shake</li>
-                    </ul>
-                    <div class="combo-footer">
-                        <div class="combo-price-wrap">
-                            <span class="combo-label">Total Price</span>
-                            <span class="combo-price">&#8377;199</span>
+                    <!-- Slide 1 -->
+                    <div class="combo-slide">
+                        <div class="combo-card">
+                            <div class="combo-img-wrap">
+                            <img class="combo-img-header" src="./QR_digital_menu_images/combo_1.jpg" alt="Masala Cold Drink + French Fries" loading="lazy">
+                            </div>
+                            <div class="combo-body">
+                                <div class="combo-head">
+                                    <span class="combo-title">Combo Pack</span>
+                                    <span class="offer-tag">COMBO OFFER</span>
+                                </div>
+                                <ul class="combo-items">
+                                    <li><span class="dot"></span> Masala Cold Drink</li>
+                                    <li><span class="dot"></span> French Fries</li>
+                                </ul>
+                                <div class="combo-footer">
+                                    <div class="combo-price-wrap">
+                                        <span class="combo-label">TOTAL PRICE</span>
+                                        <span class="combo-price">&#8377;99</span>
+                                    </div>
+                                    <span class="combo-savings"><i class="fa-solid fa-tag"></i> Save big!</span>
+                                </div>
+                            </div>
                         </div>
-                        <span class="combo-savings"><i class="fa-solid fa-fire"></i> Most loved!</span>
                     </div>
+
+                    <!-- Slide 2 -->
+                    <div class="combo-slide">
+                        <div class="combo-card">
+                            <div class="combo-img-wrap">
+                            <img class="combo-img-header" src="./QR_digital_menu_images/combo_2.jpg" alt="Veg Sandwich + Masala Cold Drink" loading="lazy">
+                            </div>
+                            <div class="combo-body">
+                                <div class="combo-head">
+                                    <span class="combo-title">Combo Pack</span>
+                                    <span class="offer-tag">COMBO OFFER</span>
+                                </div>
+                                <ul class="combo-items">
+                                    <li><span class="dot"></span> Veg Sandwich</li>
+                                    <li><span class="dot"></span> Masala Cold Drink</li>
+                                </ul>
+                                <div class="combo-footer">
+                                    <div class="combo-price-wrap">
+                                        <span class="combo-label">TOTAL PRICE</span>
+                                        <span class="combo-price">&#8377;99</span>
+                                    </div>
+                                    <span class="combo-savings"><i class="fa-solid fa-tag"></i> Save big!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="combo-slide">
+                        <div class="combo-card">
+                            <div class="combo-img-wrap">
+                            <img class="combo-img-header" src="./QR_digital_menu_images/combo_3.jpg" alt="Maggi Veg + Masala Cold Drink" loading="lazy">
+                            </div>
+                            <div class="combo-body">
+                                <div class="combo-head">
+                                    <span class="combo-title">Combo Pack</span>
+                                    <span class="offer-tag">COMBO OFFER</span>
+                                </div>
+                                <ul class="combo-items">
+                                    <li><span class="dot"></span> Maggi Veg</li>
+                                    <li><span class="dot"></span> Masala Cold Drink</li>
+                                </ul>
+                                <div class="combo-footer">
+                                    <div class="combo-price-wrap">
+                                        <span class="combo-label">TOTAL PRICE</span>
+                                        <span class="combo-price">&#8377;99</span>
+                                    </div>
+                                    <span class="combo-savings"><i class="fa-solid fa-tag"></i> Save big!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="combo-slide">
+                        <div class="combo-card">
+                            <div class="combo-img-wrap">
+                            <img class="combo-img-header" src="./QR_digital_menu_images/combo_4.jpg" alt="Cheese Corn Sandwich Peri Peri + Cold Coffee" loading="lazy">
+                            </div>
+                            <div class="combo-body">
+                                <div class="combo-head">
+                                    <span class="combo-title">Combo Pack</span>
+                                    <span class="offer-tag">COMBO OFFER</span>
+                                </div>
+                                <ul class="combo-items">
+                                    <li><span class="dot"></span> Cheese Corn Sandwich Peri Peri</li>
+                                    <li><span class="dot"></span> Cold Coffee / Mocktail</li>
+                                </ul>
+                                <div class="combo-footer">
+                                    <div class="combo-price-wrap">
+                                        <span class="combo-label">TOTAL PRICE</span>
+                                        <span class="combo-price">&#8377;149</span>
+                                    </div>
+                                    <span class="combo-savings"><i class="fa-solid fa-tag"></i> Save big!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="combo-slide">
+                        <div class="combo-card">
+                            <div class="combo-img-wrap">
+                            <img class="combo-img-header" src="./QR_digital_menu_images/combo_5.jpg" alt="Maggi Veg Cheese + Cold Coffee" loading="lazy">
+                            </div>
+                            <div class="combo-body">
+                                <div class="combo-head">
+                                    <span class="combo-title">Combo Pack</span>
+                                    <span class="offer-tag">COMBO OFFER</span>
+                                </div>
+                                <ul class="combo-items">
+                                    <li><span class="dot"></span> Maggi Veg Cheese</li>
+                                    <li><span class="dot"></span> Cold Coffee / Mocktail</li>
+                                </ul>
+                                <div class="combo-footer">
+                                    <div class="combo-price-wrap">
+                                        <span class="combo-label">TOTAL PRICE</span>
+                                        <span class="combo-price">&#8377;149</span>
+                                    </div>
+                                    <span class="combo-savings"><i class="fa-solid fa-tag"></i> Save big!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="combo-slide">
+                        <div class="combo-card">
+                            <div class="combo-img-wrap">
+                            <img class="combo-img-header" src="./QR_digital_menu_images/combo_6.jpg" alt="French Fries + Milk Shake" loading="lazy">
+                            </div>
+                            <div class="combo-body">
+                                <div class="combo-head">
+                                    <span class="combo-title">Combo Pack</span>
+                                    <span class="offer-tag">COMBO OFFER</span>
+                                </div>
+                                <ul class="combo-items">
+                                    <li><span class="dot"></span> French Fries</li>
+                                    <li><span class="dot"></span> Milk Shake</li>
+                                </ul>
+                                <div class="combo-footer">
+                                    <div class="combo-price-wrap">
+                                        <span class="combo-label">TOTAL PRICE</span>
+                                        <span class="combo-price">&#8377;149</span>
+                                    </div>
+                                    <span class="combo-savings"><i class="fa-solid fa-tag"></i> Save big!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 7 - Jumbo -->
+                    <div class="combo-slide">
+                        <div class="combo-card">
+                            <div class="combo-img-wrap">
+                            <img class="combo-img-header" src="./QR_digital_menu_images/jumbo_1.jpg" alt="Veg Sandwich + Fries + Shake" loading="lazy">
+                            </div>
+                            <div class="combo-body">
+                                <div class="combo-head">
+                                    <span class="combo-title">Jumbo Combo</span>
+                                    <span class="offer-tag" style="background: linear-gradient(135deg, #d35400, #e67e22);">BEST SELLER</span>
+                                </div>
+                                <ul class="combo-items">
+                                    <li><span class="dot"></span> Veg Sandwich</li>
+                                    <li><span class="dot"></span> French Fries</li>
+                                    <li><span class="dot"></span> Milk Shake</li>
+                                </ul>
+                                <div class="combo-footer">
+                                    <div class="combo-price-wrap">
+                                        <span class="combo-label">TOTAL PRICE</span>
+                                        <span class="combo-price">&#8377;199</span>
+                                    </div>
+                                    <span class="combo-savings" style="color: #27ae60; background: #eafbf1; border: 1px solid #bdf1d0;"><i class="fa-solid fa-fire"></i> Most loved!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 8 - Jumbo -->
+                    <div class="combo-slide">
+                        <div class="combo-card">
+                            <div class="combo-img-wrap">
+                            <img class="combo-img-header" src="./QR_digital_menu_images/jumbo_2.jpg" alt="Mexican Sandwich + Fries + Shake" loading="lazy">
+                            </div>
+                            <div class="combo-body">
+                                <div class="combo-head">
+                                    <span class="combo-title">Jumbo Combo</span>
+                                    <span class="offer-tag" style="background: linear-gradient(135deg, #d35400, #e67e22);">BEST SELLER</span>
+                                </div>
+                                <ul class="combo-items">
+                                    <li><span class="dot"></span> Mexican Sandwich</li>
+                                    <li><span class="dot"></span> French Fries Peri Peri</li>
+                                    <li><span class="dot"></span> Milk Shake</li>
+                                </ul>
+                                <div class="combo-footer">
+                                    <div class="combo-price-wrap">
+                                        <span class="combo-label">TOTAL PRICE</span>
+                                        <span class="combo-price">&#8377;249</span>
+                                    </div>
+                                    <span class="combo-savings" style="color: #27ae60; background: #eafbf1; border: 1px solid #bdf1d0;"><i class="fa-solid fa-fire"></i> Most loved!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 9 - Jumbo -->
+                    <div class="combo-slide">
+                        <div class="combo-card">
+                            <div class="combo-img-wrap">
+                            <img class="combo-img-header" src="./QR_digital_menu_images/jumbo_3.jpg" alt="Paneer Maggi + Sandwich + Mocktail" loading="lazy">
+                            </div>
+                            <div class="combo-body">
+                                <div class="combo-head">
+                                    <span class="combo-title">Jumbo Combo</span>
+                                    <span class="offer-tag" style="background: linear-gradient(135deg, #d35400, #e67e22);">BEST SELLER</span>
+                                </div>
+                                <ul class="combo-items">
+                                    <li><span class="dot"></span> Paneer Maggi</li>
+                                    <li><span class="dot"></span> Paneer Sandwich</li>
+                                    <li><span class="dot"></span> Mocktail</li>
+                                </ul>
+                                <div class="combo-footer">
+                                    <div class="combo-price-wrap">
+                                        <span class="combo-label">TOTAL PRICE</span>
+                                        <span class="combo-price">&#8377;249</span>
+                                    </div>
+                                    <span class="combo-savings" style="color: #27ae60; background: #eafbf1; border: 1px solid #bdf1d0;"><i class="fa-solid fa-fire"></i> Most loved!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+                <div class="carousel-dots" id="carouselDots"></div>
             </div>
         </section>
 
@@ -1047,7 +1409,7 @@
                     alt="Tea" loading="lazy">
                 <div class="section-title-wrap">
                     <h2 class="section-title">Tea</h2>
-                    <span class="section-count">4 varieties</span>
+                    <span class="section-count">5 varieties</span>
                 </div>
             </div>
             <div class="divider"></div>
@@ -1084,6 +1446,14 @@
                     </div>
                     <span class="item-price">&#8377;20</span>
                 </div>
+                <div class="menu-item">
+                    <img class="item-icon" src="./QR_digital_menu_images/kulhad_tea.png" alt="Kulhad Tea" loading="lazy">
+                    <div class="item-info">
+                        <div class="item-name">Kulhad Tea</div>
+                        <div class="item-desc">Served in traditional mud cups for an earthy aroma</div>
+                    </div>
+                    <span class="item-price">&#8377;20</span>
+                </div>
             </div>
         </section>
 
@@ -1094,7 +1464,7 @@
                     alt="Coffee" loading="lazy">
                 <div class="section-title-wrap">
                     <h2 class="section-title">Coffee</h2>
-                    <span class="section-count">4 options</span>
+                    <span class="section-count">3 options</span>
                 </div>
             </div>
             <div class="divider"></div>
@@ -1116,21 +1486,51 @@
                     <span class="item-price">&#8377;20</span>
                 </div>
                 <div class="menu-item">
-                    <img class="item-icon" src="./QR_digital_menu_images/cold_coffee.png" alt="Cold Coffee" loading="lazy">
+                    <img class="item-icon" src="./QR_digital_menu_images/kulhad_coffee.png" alt="Kulhad Coffee" loading="lazy">
                     <div class="item-info">
-                        <div class="item-name">Cold Coffee</div>
-                        <div class="item-desc">Chilled &amp; creamy</div>
+                        <div class="item-name">Kulhad Coffee</div>
+                        <div class="item-desc">Coffee served with rich mud cup flavor</div>
                     </div>
-                    <span class="item-price">&#8377;80</span>
+                    <span class="item-price">&#8377;25</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= HOT MILK ======= -->
+        <section id="hotmilk" class="section reveal">
+            <div class="section-header">
+                <img class="section-icon" src="./QR_digital_menu_images/hot_milk.png"
+                    alt="Hot Milk" loading="lazy">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">Hot Milk</h2>
+                    <span class="section-count">3 options</span>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="menu-card">
+                <div class="menu-item">
+                    <img class="item-icon" src="./QR_digital_menu_images/hot_milk.png" alt="Hot Milk" loading="lazy">
+                    <div class="item-info">
+                        <div class="item-name">Hot Milk</div>
+                        <div class="item-desc">Warm &amp; comforting</div>
+                    </div>
+                    <span class="item-price">&#8377;30</span>
                 </div>
                 <div class="menu-item">
-                    <img class="item-icon" src="./QR_digital_menu_images/cold_coffee_ice_cream.png" alt="Cold Coffee Ice Cream"
-                        loading="lazy">
+                    <img class="item-icon" src="./QR_digital_menu_images/horlicks.png" alt="Horlicks" loading="lazy">
                     <div class="item-info">
-                        <div class="item-name">Cold Coffee Ice Cream</div>
-                        <div class="item-desc">Topped with ice cream</div>
+                        <div class="item-name">Horlicks</div>
+                        <div class="item-desc">Healthy malted milk drink</div>
                     </div>
-                    <span class="item-price">&#8377;99</span>
+                    <span class="item-price">&#8377;40</span>
+                </div>
+                <div class="menu-item">
+                    <img class="item-icon" src="./QR_digital_menu_images/hot_chocolate_milk.png" alt="Hot Chocolate Milk" loading="lazy">
+                    <div class="item-info">
+                        <div class="item-name">Hot Chocolate Milk</div>
+                        <div class="item-desc">Rich &amp; creamy</div>
+                    </div>
+                    <span class="item-price">&#8377;40</span>
                 </div>
             </div>
         </section>
@@ -1142,7 +1542,7 @@
                     alt="Milk Shakes" loading="lazy">
                 <div class="section-title-wrap">
                     <h2 class="section-title">Milk Shakes</h2>
-                    <span class="section-count">3 flavours</span>
+                    <span class="section-count">5 flavours</span>
                 </div>
             </div>
             <div class="divider"></div>
@@ -1171,6 +1571,53 @@
                     </div>
                     <span class="item-price">&#8377;99</span>
                 </div>
+                <div class="menu-item">
+                    <img class="item-icon" src="./QR_digital_menu_images/vanilla_milk_shake.png" alt="Vanilla Milk Shake" loading="lazy">
+                    <div class="item-info">
+                        <div class="item-name">Vanilla Milk Shake</div>
+                        <div class="item-desc">Classic creamy treat</div>
+                    </div>
+                    <span class="item-price">&#8377;99</span>
+                </div>
+                <div class="menu-item">
+                    <img class="item-icon" src="./QR_digital_menu_images/butterscotch_milk_shake.png" alt="Butterscotch Milk Shake" loading="lazy">
+                    <div class="item-info">
+                        <div class="item-name">Butterscotch Milk Shake</div>
+                        <div class="item-desc">Sweet and buttery</div>
+                    </div>
+                    <span class="item-price">&#8377;99</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= COLD COFFEE ======= -->
+        <section id="coldcoffee" class="section reveal">
+            <div class="section-header">
+                <img class="section-icon" src="./QR_digital_menu_images/cold_coffee.png"
+                    alt="Cold Coffee" loading="lazy">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">Cold Coffee</h2>
+                    <span class="section-count">2 options</span>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <div class="menu-card">
+                <div class="menu-item">
+                    <img class="item-icon" src="./QR_digital_menu_images/cold_coffee.png" alt="Regular Cold Coffee" loading="lazy">
+                    <div class="item-info">
+                        <div class="item-name">Regular Cold Coffee</div>
+                        <div class="item-desc">Chilled &amp; creamy</div>
+                    </div>
+                    <span class="item-price">&#8377;80</span>
+                </div>
+                <div class="menu-item">
+                    <img class="item-icon" src="./QR_digital_menu_images/cold_coffee_ice_cream.png" alt="Cold Coffee With Ice Cream" loading="lazy">
+                    <div class="item-info">
+                        <div class="item-name">Cold Coffee With Ice Cream</div>
+                        <div class="item-desc">Topped with ice cream</div>
+                    </div>
+                    <span class="item-price">&#8377;99</span>
+                </div>
             </div>
         </section>
 
@@ -1181,7 +1628,7 @@
                     alt="Sandwiches" loading="lazy">
                 <div class="section-title-wrap">
                     <h2 class="section-title">Sandwiches</h2>
-                    <span class="section-count">3 options</span>
+                    <span class="section-count">10 options</span>
                 </div>
             </div>
             <div class="divider"></div>
@@ -1208,6 +1655,62 @@
                     <div class="item-info">
                         <div class="item-name">Mexican Sandwich</div>
                         <div class="item-desc">Spicy Mexican twist</div>
+                    </div>
+                    <span class="item-price">&#8377;99</span>
+                </div>
+                <div class="menu-item">
+                    <img class="item-icon" src="./QR_digital_menu_images/coleslaw_sandwich.png" alt="Coleslaw Sandwich" loading="lazy">
+                    <div class="item-info">
+                        <div class="item-name">Coleslaw Sandwich</div>
+                        <div class="item-desc">Fresh and delicious coleslaw</div>
+                    </div>
+                    <span class="item-price">&#8377;70</span>
+                </div>
+                <div class="menu-item">
+                    <img class="item-icon" src="./QR_digital_menu_images/veg_cheese_sandwich.png" alt="Veg Cheese Sandwich" loading="lazy">
+                    <div class="item-info">
+                        <div class="item-name">Veg Cheese Sandwich</div>
+                        <div class="item-desc">Grilled vegetables &amp; melted cheese</div>
+                    </div>
+                    <span class="item-price">&#8377;70</span>
+                </div>
+                <div class="menu-item">
+                    <img class="item-icon" src="./QR_digital_menu_images/bombay_masala_sandwich.png" alt="Bombay Masala Sandwich" loading="lazy">
+                    <div class="item-info">
+                        <div class="item-name">Bombay Masala Sandwich</div>
+                        <div class="item-desc">Classic Indian toasted sandwich</div>
+                    </div>
+                    <span class="item-price">&#8377;80</span>
+                </div>
+                <div class="menu-item">
+                    <img class="item-icon" src="./QR_digital_menu_images/veg_cheese_peri_peri_sandwich.png" alt="Veg Cheese Peri Peri Sandwich" loading="lazy">
+                    <div class="item-info">
+                        <div class="item-name">Veg Cheese Peri Peri Sandwich</div>
+                        <div class="item-desc">Spicy peri peri &amp; cheese</div>
+                    </div>
+                    <span class="item-price">&#8377;80</span>
+                </div>
+                <div class="menu-item">
+                    <img class="item-icon" src="./QR_digital_menu_images/cheese_corn_peri_peri_sandwich.png" alt="Cheese Corn Peri Peri Sandwich" loading="lazy">
+                    <div class="item-info">
+                        <div class="item-name">Cheese Corn Peri Peri Sandwich</div>
+                        <div class="item-desc">Sweet corn, cheese &amp; peri peri</div>
+                    </div>
+                    <span class="item-price">&#8377;80</span>
+                </div>
+                <div class="menu-item">
+                    <img class="item-icon" src="./QR_digital_menu_images/chocolate_sandwich.png" alt="Chocolate Sandwich" loading="lazy">
+                    <div class="item-info">
+                        <div class="item-name">Chocolate Sandwich</div>
+                        <div class="item-desc">Oozing melted chocolate</div>
+                    </div>
+                    <span class="item-price">&#8377;80</span>
+                </div>
+                <div class="menu-item">
+                    <img class="item-icon" src="./QR_digital_menu_images/paneer_veg_cheese_sandwich.png" alt="Paneer Veg Cheese Sandwich" loading="lazy">
+                    <div class="item-info">
+                        <div class="item-name">Paneer Veg Cheese Sandwich</div>
+                        <div class="item-desc">Paneer, vegetables &amp; cheese</div>
                     </div>
                     <span class="item-price">&#8377;99</span>
                 </div>
@@ -1261,7 +1764,7 @@
                     alt="Maggi" loading="lazy">
                 <div class="section-title-wrap">
                     <h2 class="section-title">Maggi</h2>
-                    <span class="section-count">4 variants</span>
+                    <span class="section-count">7 variants</span>
                 </div>
             </div>
             <div class="divider"></div>
@@ -1299,6 +1802,30 @@
                         <div class="item-desc">Loaded with cheese</div>
                     </div>
                     <span class="item-price">&#8377;80</span>
+                </div>
+                <div class="menu-item">
+                    <img class="item-icon" src="./QR_digital_menu_images/veg_cheese_corn_maggi.png" alt="Veg Cheese Corn Maggi" loading="lazy">
+                    <div class="item-info">
+                        <div class="item-name">Veg Cheese Corn Maggi</div>
+                        <div class="item-desc">Cheese and sweet corn</div>
+                    </div>
+                    <span class="item-price">&#8377;80</span>
+                </div>
+                <div class="menu-item">
+                    <img class="item-icon" src="./QR_digital_menu_images/veg_paneer_maggi.png" alt="Veg Paneer Maggi" loading="lazy">
+                    <div class="item-info">
+                        <div class="item-name">Veg Paneer Maggi</div>
+                        <div class="item-desc">Fresh paneer &amp; veggies</div>
+                    </div>
+                    <span class="item-price">&#8377;99</span>
+                </div>
+                <div class="menu-item">
+                    <img class="item-icon" src="./QR_digital_menu_images/veg_cheese_garlic_maggi.png" alt="Veg Cheese Garlic Maggi" loading="lazy">
+                    <div class="item-info">
+                        <div class="item-name">Veg Cheese Garlic Maggi</div>
+                        <div class="item-desc">Cheese &amp; garlic flavor</div>
+                    </div>
+                    <span class="item-price">&#8377;99</span>
                 </div>
             </div>
         </section>
@@ -1382,6 +1909,65 @@
                 }
             });
         }, { passive: true });
+
+        /* ── COMBO CAROUSEL ─────────────────────────────────── */
+        (function () {
+            const track = document.getElementById('comboTrack');
+            const slides = track.querySelectorAll('.combo-slide');
+            const dotsContainer = document.getElementById('carouselDots');
+            const counter = document.getElementById('slideCounter');
+            const prevBtn = document.getElementById('comboPrev');
+            const nextBtn = document.getElementById('comboNext');
+            const total = slides.length;
+            let current = 0;
+            let autoTimer;
+
+            // Build dots
+            for (let i = 0; i < total; i++) {
+                const dot = document.createElement('button');
+                dot.classList.add('carousel-dot');
+                if (i === 0) dot.classList.add('active');
+                dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+                dot.addEventListener('click', () => goTo(i));
+                dotsContainer.appendChild(dot);
+            }
+            const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+            function goTo(index) {
+                if (index < 0) index = total - 1;
+                if (index >= total) index = 0;
+                current = index;
+                track.style.transform = 'translateX(-' + (current * 100) + '%)';
+                dots.forEach((d, i) => d.classList.toggle('active', i === current));
+                counter.textContent = (current + 1) + ' / ' + total;
+                resetAuto();
+            }
+
+            prevBtn.addEventListener('click', () => goTo(current - 1));
+            nextBtn.addEventListener('click', () => goTo(current + 1));
+
+            // Touch / Swipe support
+            let startX = 0, isDragging = false;
+            track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; isDragging = true; }, { passive: true });
+            track.addEventListener('touchend', e => {
+                if (!isDragging) return;
+                isDragging = false;
+                const diff = startX - e.changedTouches[0].clientX;
+                if (Math.abs(diff) > 50) goTo(current + (diff > 0 ? 1 : -1));
+            }, { passive: true });
+
+            // Auto-advance every 4 seconds
+            function resetAuto() {
+                clearInterval(autoTimer);
+                autoTimer = setInterval(() => goTo(current + 1), 4000);
+            }
+            resetAuto();
+
+            // Pause auto-scroll on hover
+            const wrapper = document.getElementById('comboCarousel');
+            wrapper.addEventListener('mouseenter', () => clearInterval(autoTimer));
+            wrapper.addEventListener('mouseleave', resetAuto);
+        })();
     </script>
 </body>
 
