@@ -3,7 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#f4f6fb" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#06080e" media="(prefers-color-scheme: dark)">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' https://images.unsplash.com data:; script-src 'self' 'unsafe-inline'; connect-src 'self';">
@@ -13,8 +18,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,600;1,700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -98,6 +104,8 @@
 
         html {
             scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
         }
 
         body {
@@ -107,6 +115,11 @@
             display: flex;
             justify-content: center;
             transition: background 0.45s ease, color 0.45s ease;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeSpeed;
+            overflow-x: hidden;
+            overscroll-behavior-y: contain;
         }
 
         .app {
@@ -114,7 +127,32 @@
             max-width: 540px;
             background: var(--bg);
             min-height: 100vh;
+            min-height: 100dvh;
             position: relative;
+        }
+
+        /* ============================================================
+           REDUCED MOTION — respect user preferences, save battery
+        ============================================================ */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .hero-bg { animation: none !important; }
+            .combo-carousel-track { transition: none !important; }
+        }
+
+        /* ============================================================
+           TOUCH DEVICE — remove hover effects on touch-only devices
+        ============================================================ */
+        @media (hover: none) {
+            .menu-item:hover { transform: none; box-shadow: var(--shadow); }
+            .combo-card:hover { transform: none; }
+            .nav-pill:hover { transform: none; }
+            .carousel-btn:hover { transform: none; }
         }
 
         /* ============================================================
@@ -292,10 +330,11 @@
             background: var(--nav-blur-bg);
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
-            padding: 14px 16px;
+            padding: 10px 14px;
             display: flex;
-            gap: 10px;
+            gap: 8px;
             overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
             border-bottom: 1px solid var(--border);
             scrollbar-width: none;
             transition: box-shadow 0.3s;
@@ -314,21 +353,23 @@
             text-decoration: none;
             color: var(--text-soft);
             background: var(--card);
-            padding: 9px 18px;
+            padding: 8px 16px;
             border-radius: 999px;
-            font-size: 13.5px;
+            font-size: 13px;
             font-weight: 700;
             display: inline-flex;
             align-items: center;
-            gap: 7px;
+            gap: 6px;
             border: 1.5px solid var(--border);
             transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: var(--shadow-sm);
             cursor: pointer;
+            min-height: 44px;
+            flex-shrink: 0;
         }
 
         .nav-pill i {
-            font-size: 13px;
+            font-size: 12px;
         }
 
         .nav-pill:hover {
@@ -349,8 +390,9 @@
            SECTIONS
         ============================================================ */
         .section {
-            padding: 32px 20px;
-            scroll-margin-top: 72px;
+            padding: 24px 16px;
+            scroll-margin-top: 60px;
+            contain: content;
         }
 
         .section-header {
@@ -377,7 +419,7 @@
 
         .section-title {
             font-family: 'Playfair Display', serif;
-            font-size: 28px;
+            font-size: 24px;
             font-weight: 800;
         }
 
@@ -403,38 +445,37 @@
         .menu-card {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
+            gap: 12px;
         }
 
         .menu-item {
-            background: rgba(var(--card-rgb), 0.7);
-            backdrop-filter: blur(20px);
+            background: var(--card);
             border: 1px solid var(--border-soft);
-            border-radius: 20px;
+            border-radius: 18px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             position: relative;
-            box-shadow: var(--shadow);
-            transition: transform 0.32s ease, box-shadow 0.32s ease, background 0.3s ease;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            contain: layout style;
         }
 
         .menu-item:hover {
             transform: translateY(-4px);
-            box-shadow: var(--shadow-xl);
-            background: rgba(var(--card-rgb), 0.95);
+            box-shadow: var(--shadow-lg);
         }
 
         .item-icon {
             width: 100%;
-            height: 140px;
+            height: 120px;
             object-fit: cover;
             background: var(--border-soft);
             border-bottom: 1px solid var(--border-soft);
         }
 
         .item-info {
-            padding: 12px 14px 6px;
+            padding: 10px 12px 4px;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -442,14 +483,14 @@
 
         .item-name {
             font-weight: 800;
-            font-size: 16px;
+            font-size: 14px;
             color: var(--text);
             line-height: 1.25;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
 
         .item-desc {
-            font-size: 12.5px;
+            font-size: 11.5px;
             color: var(--muted);
             line-height: 1.35;
             font-weight: 400;
@@ -457,9 +498,9 @@
 
         .item-price {
             font-weight: 800;
-            font-size: 16px;
+            font-size: 15px;
             color: var(--accent);
-            padding: 0 14px 14px;
+            padding: 0 12px 12px;
             margin-top: auto;
         }
 
@@ -590,17 +631,17 @@
            FOOTER
         ============================================================ */
         .footer {
-            padding: 44px 24px;
+            padding: 32px 20px;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .footer-logo {
             font-family: 'Playfair Display', serif;
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 900;
             background: linear-gradient(135deg, var(--accent), var(--accent2));
             -webkit-background-clip: text;
@@ -609,7 +650,7 @@
         }
 
         .footer-copy {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--muted);
             font-weight: 500;
         }
@@ -684,17 +725,20 @@
            PREMIUM DARK MODE ENHANCEMENTS
         ============================================================ */
 
-        /* Subtle grain texture overlay for depth */
-        [data-theme="dark"] body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            z-index: 9999;
-            pointer-events: none;
-            opacity: 0.028;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-            background-repeat: repeat;
-            background-size: 180px 180px;
+        /* Grain texture removed on mobile for GPU performance.
+           Only render on larger screens with hover capability. */
+        @media (hover: hover) and (min-width: 768px) {
+            [data-theme="dark"] body::before {
+                content: '';
+                position: fixed;
+                inset: 0;
+                z-index: 9999;
+                pointer-events: none;
+                opacity: 0.028;
+                background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+                background-repeat: repeat;
+                background-size: 180px 180px;
+            }
         }
 
         /* Deep ambient background with subtle radial glow */
@@ -731,26 +775,18 @@
             box-shadow: 0 4px 24px rgba(240,160,48,0.35), 0 0 60px rgba(240,160,48,0.1);
         }
 
-        /* --- Menu item cards: deep glass with edge highlights --- */
+        /* --- Menu item cards: simplified glass for mobile perf --- */
         [data-theme="dark"] .menu-item {
-            background: rgba(12, 16, 33, 0.6);
-            backdrop-filter: blur(16px) saturate(1.2);
-            -webkit-backdrop-filter: blur(16px) saturate(1.2);
+            background: rgba(12, 16, 33, 0.85);
             border: 1px solid rgba(255, 255, 255, 0.06);
-            box-shadow:
-                0 8px 32px rgba(0,0,0,0.5),
-                inset 0 1px 0 rgba(255,255,255,0.05),
-                inset 0 0 0 0.5px rgba(255,255,255,0.03);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.4);
         }
 
         [data-theme="dark"] .menu-item:hover {
-            background: rgba(16, 22, 44, 0.8);
+            background: rgba(16, 22, 44, 0.9);
             border-color: rgba(240, 160, 48, 0.15);
-            box-shadow:
-                0 16px 48px rgba(0,0,0,0.6),
-                0 0 40px rgba(240,160,48,0.06),
-                inset 0 1px 0 rgba(255,255,255,0.08);
-            transform: translateY(-6px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+            transform: translateY(-4px);
         }
 
         [data-theme="dark"] .item-icon {
@@ -758,42 +794,40 @@
             background: rgba(0,0,0,0.3);
         }
 
-        /* --- Combo cards: premium animated gradient border --- */
+        /* --- Combo cards: optimized for mobile --- */
         [data-theme="dark"] .combo-card {
-            background: rgba(12, 16, 33, 0.65);
+            background: rgba(12, 16, 33, 0.85);
             border: 1px solid rgba(255, 255, 255, 0.07);
-            backdrop-filter: blur(20px) saturate(1.3);
-            -webkit-backdrop-filter: blur(20px) saturate(1.3);
-            box-shadow:
-                0 12px 40px rgba(0,0,0,0.55),
-                inset 0 1px 0 rgba(255,255,255,0.06);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.45);
             position: relative;
             overflow: hidden;
         }
 
-        /* Animated shimmer on combo card border */
-        [data-theme="dark"] .combo-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            padding: 1.5px;
-            background: linear-gradient(
-                130deg,
-                transparent 0%,
-                rgba(240,160,48,0.25) 25%,
-                rgba(255,211,115,0.15) 50%,
-                rgba(240,160,48,0.25) 75%,
-                transparent 100%
-            );
-            background-size: 300% 300%;
-            animation: shimmer-border 6s ease-in-out infinite;
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            pointer-events: none;
-            z-index: 1;
+        /* Animated shimmer only on non-touch devices to save battery */
+        @media (hover: hover) {
+            [data-theme="dark"] .combo-card::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                border-radius: inherit;
+                padding: 1.5px;
+                background: linear-gradient(
+                    130deg,
+                    transparent 0%,
+                    rgba(240,160,48,0.25) 25%,
+                    rgba(255,211,115,0.15) 50%,
+                    rgba(240,160,48,0.25) 75%,
+                    transparent 100%
+                );
+                background-size: 300% 300%;
+                animation: shimmer-border 6s ease-in-out infinite;
+                -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                mask-composite: exclude;
+                pointer-events: none;
+                z-index: 1;
+            }
         }
 
         @keyframes shimmer-border {
@@ -951,8 +985,10 @@
         }
         .combo-carousel-track {
             display: flex;
-            transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             will-change: transform;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
         }
         .combo-slide {
             min-width: 100%;
@@ -967,9 +1003,9 @@
         /* Carousel Navigation Arrows — positioned on the image area */
         .carousel-btn {
             position: absolute;
-            top: 90px;
-            width: 34px;
-            height: 34px;
+            top: 75px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             border: none;
             background: rgba(255,255,255,0.92);
@@ -980,18 +1016,18 @@
             cursor: pointer;
             z-index: 5;
             box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-            transition: all 0.25s ease;
+            transition: background 0.2s ease, color 0.2s ease;
             font-size: 13px;
+            min-width: 44px;
+            min-height: 44px;
         }
         .carousel-btn:hover {
             background: var(--accent);
             color: #fff;
-            box-shadow: 0 4px 20px var(--accent-glow);
-            transform: scale(1.1);
         }
-        .carousel-btn:active { transform: scale(0.95); }
-        .carousel-btn.prev { left: 10px; }
-        .carousel-btn.next { right: 10px; }
+        .carousel-btn:active { transform: scale(0.93); }
+        .carousel-btn.prev { left: 6px; }
+        .carousel-btn.next { right: 6px; }
         [data-theme="dark"] .carousel-btn {
             background: rgba(15,18,30,0.85);
             color: #eee;
@@ -1040,7 +1076,7 @@
         }
         .combo-img-header {
             width: 100%;
-            height: 170px;
+            height: 155px;
             object-fit: cover;
             display: block;
         }
@@ -1886,19 +1922,18 @@
             });
         });
 
-        /* ── NAV SCROLL SPY ─────────────────────────────────── */
+        /* ── NAV SCROLL SPY (throttled for mobile perf) ──── */
         const sections = document.querySelectorAll('section[id]');
         const pills = document.querySelectorAll('.nav-pill');
         const navbar = document.getElementById('navbar');
+        let scrollTicking = false;
 
-        window.addEventListener('scroll', () => {
-            /* Sticky nav shadow */
+        function onScroll() {
             navbar.classList.toggle('scrolled', window.scrollY > 10);
 
-            /* Active pill */
             let current = '';
             sections.forEach(sec => {
-                if (window.scrollY >= sec.offsetTop - 140) current = sec.id;
+                if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
             });
 
             pills.forEach(link => {
@@ -1908,6 +1943,14 @@
                     link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
                 }
             });
+            scrollTicking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!scrollTicking) {
+                requestAnimationFrame(onScroll);
+                scrollTicking = true;
+            }
         }, { passive: true });
 
         /* ── COMBO CAROUSEL ─────────────────────────────────── */
@@ -1956,17 +1999,25 @@
                 if (Math.abs(diff) > 50) goTo(current + (diff > 0 ? 1 : -1));
             }, { passive: true });
 
-            // Auto-advance every 4 seconds
+            // Auto-advance every 5 seconds (not too fast on mobile)
             function resetAuto() {
                 clearInterval(autoTimer);
-                autoTimer = setInterval(() => goTo(current + 1), 4000);
+                autoTimer = setInterval(() => goTo(current + 1), 5000);
             }
             resetAuto();
 
-            // Pause auto-scroll on hover
+            // Pause auto-scroll on hover (desktop) and when tab is backgrounded
             const wrapper = document.getElementById('comboCarousel');
             wrapper.addEventListener('mouseenter', () => clearInterval(autoTimer));
             wrapper.addEventListener('mouseleave', resetAuto);
+
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    clearInterval(autoTimer);
+                } else {
+                    resetAuto();
+                }
+            });
         })();
     </script>
 </body>
